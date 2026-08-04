@@ -50,6 +50,8 @@ Furthermore, hash values make it easier for security professionals to share malw
 |------|------------------|
 | **Suspicious Embedded Strings** | URLs or IP addresses, PowerShell commands, `cmd.exe`, `rundll32.exe`, `regsvr32.exe`, registry paths such as `Software\Microsoft\Windows\CurrentVersion\Run`, `%AppData%`, `%Temp%`, Base64-encoded strings, mutex names, error messages, and references to Windows API functions. |
 | **Suspicious Embedded Functions** | `CreateProcess()`, `WinExec()`, `ShellExecute()`, `VirtualAlloc()`, `WriteProcessMemory()`, `CreateRemoteThread()`, `InternetOpenUrl()`, `URLDownloadToFile()`, `WSAStartup()`, `RegSetValueEx()`, `OpenProcess()`, `CreateFile()`, `WriteFile()`, and `Sleep()`. These APIs are commonly associated with process execution, code injection, networking, persistence, and file manipulation. |
+**Whether the sample is packed or not**
+The sample is not packed 43%
 | **Compiler**  the sample is a Windows PE executable, analysis tools may identify compilers such as **Microsoft Visual C++**, **MinGW GCC**, **Delphi**, or **Borland**. Malware authors may remove or modify compiler information to hinder attribution. |
 | **Version Information** | Malware often contains missing, empty, or falsified version information. Unlike legitimate software, fields such as **Company Name**, **Product Name**, **File Description**, and **File Version** may be absent or intentionally forged. |
 
