@@ -1,5 +1,4 @@
-# Img.cartel-Analysis-
-I'll format it as a GitHub README.md using Markdown.
+# Img.cartel-Analysis report
 
 # Malware Analysis Report: `cartel.img`
 
