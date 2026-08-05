@@ -51,7 +51,7 @@ Furthermore, hash values make it easier for security professionals to share malw
 **Whether the sample is packed or not**
   The sample is not packed 43%
 
-| **Compiler**  the sample is a Windows PE executable, analysis tools may identify compilers such as **Microsoft Visual C++**, **MinGW GCC**, **Delphi**, or **Borland**. Malware authors may remove or modify compiler information to hinder attribution. |
+| **Compiler**  the sample is a Windows non-PE executable, analysis tools may identify compilers such as **Microsoft Visual C++**, **MinGW GCC**, **Delphi**, or **Borland**. Malware authors may remove or modify compiler information to hinder attribution. |
 | **Version Information** | Malware often contains missing, empty, or falsified version information. Unlike legitimate software, fields such as **Company Name**, **Product Name**, **File Description**, and **File Version** may be absent or intentionally forged. |
 
 ---
