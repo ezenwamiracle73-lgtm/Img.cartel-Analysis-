@@ -25,9 +25,9 @@ The purpose of this task is to identify the malware sample and document its basi
 | **File Name** | `cartel.img` |
 | **MD5 Hash** | `80348c58eec4c328ef1f7709adc56a54` |
 | **SHA-256 Hash** | `ce550424200a997c61b413941c8ef4df9619a2f96579674952294a176a32be65` |
-| **File Size** | `248 bytes` |
+| **File Size** | `248MB` |
 | **File Type / Permissions** | `-rw-rw-r--` |
-| **Architecture** | `16-bit` |
+| **Architecture** | FAT `16-bit` |
 
 ---
 
@@ -45,10 +45,12 @@ Furthermore, hash values make it easier for security professionals to share malw
 ## Analysis Summary
 
 | Item | Possible Finding |
-|------|-------------!*Suspicious Embedded Strings** | URLs or IP addresses, PowerShell commands, `cmd.exe`, `rundll32.exe`, `regsvr32.exe`, registry paths such as sorry,`Software\Microsoft\Windows\CurrentVersion\Run`, `%AppData%`, `%Temp%`, Base64-encoded strings, mutex names, error messages, and references to Windows API functions. |
+|------|-------------!*Suspicious Embedded Strings** | URLs or IP addresses, PowerShell commands, `cmd.exe`, `rundll32.exe`, `regsvr32.exe`, registry paths such as sorry,`Software\Microsoft\Windows\CurrentVersion\Run, Base64-encoded strings, mutex names, error messages, and references to Windows API functions. |
 | **Suspicious Embedded Functions** | `CreateProcess()`, `WinExec()`, `ShellExecute()`, `VirtualAlloc()`, `WriteProcessMemory()`, `CreateRemoteThread()`, `InternetOpenUrl()`, `URLDownloadToFile()`, `WSAStartup()`, `RegSetValueEx()`, `OpenProcess()`, `CreateFile()`, `WriteFile()`, and `Sleep()`. These APIs are commonly associated with process execution, code injection, networking, persistence, and file manipulation. |
+
 **Whether the sample is packed or not**
-The sample is not packed 43%
+  The sample is not packed 43%
+
 | **Compiler**  the sample is a Windows PE executable, analysis tools may identify compilers such as **Microsoft Visual C++**, **MinGW GCC**, **Delphi**, or **Borland**. Malware authors may remove or modify compiler information to hinder attribution. |
 | **Version Information** | Malware often contains missing, empty, or falsified version information. Unlike legitimate software, fields such as **Company Name**, **Product Name**, **File Description**, and **File Version** may be absent or intentionally forged. |
 
@@ -58,11 +60,11 @@ The sample is not packed 43%
 
 ## Suspicious Embedded Strings
 
-Suspicious strings can reveal the malware's intended capabilities. Examples include command interpreters, registry paths, encoded data, file system locations, and network indicators. These strings may suggest that the malware is capable of executing commands, modifying the Windows Registry, storing files in hidden directories, or communicating with remote servers.
+Suspicious strings can reveal the malware's intended capabilities.command interpreters, registry paths, encoded data, file system locations, and network indicators,such as sorry. These strings may suggest that the malware is capable of executing commands, modifying the Windows Registry, storing files in hidden directories, or communicating with remote servers.
 
 ## Suspicious Embedded Functions
 
-The presence of Windows API functions provides insight into the malware's behavior. Functions related to process creation, memory allocation, code injection, registry modification, networking, and file operations indicate capabilities such as downloading additional payloads, injecting malicious code into other processes, maintaining persistence, stealing information, or communicating with command-and-control (C2) servers.
+The presence of Windows API functions provides insight into the malware's behavior. Functions related to process creation, memory allocation, code injection, registry modification, networking, and file operations indicate capabilities such as downloading additional payloads, injecting malicious code into other processes, maintaining persistence, stealing information, or communicating with command-and-control (C2) servers.e.g charlie
 
 ## Compiler Information
 
